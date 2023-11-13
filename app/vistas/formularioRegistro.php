@@ -8,7 +8,7 @@
     <?php echo (isset($errores['email'])) ? "$errores[email] <br>" : ""; ?>
     <br>
     <label>Contraseña</label>
-    <input type="text" name="constrasenya" value="<?= isset($contrasenya)?$contrasenya: "";?>"></input>
+    <input type="text" name="contrasenya" value="<?= isset($contrasenya)?$contrasenya: "";?>"></input>
     <?php echo (isset($errores['contrasenya'])) ? "$errores[contrasenya] <br>" : ""; ?>
     <br>
     <label>Fecha Nacimiento</label>

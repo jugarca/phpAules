@@ -1,7 +1,7 @@
 <form action="" method="post">
     <label>Login</label>
     <input type="text" name="login" value="<?= isset($login) ? $login : "";?>"></input>
-    <?php echo(isset($errores['login'])) ? "$errores[idioma] <br>" : "";?>
+    <?php echo(isset($errores['login'])) ? "$errores[login] <br>" : "";?>
     <br>
     <label>Password</label>
     <input type="text" name="pass" value="<?= isset($pass) ? $pass : "";?>"></input>
