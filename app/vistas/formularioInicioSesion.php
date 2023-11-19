@@ -7,6 +7,7 @@
     <input type="text" name="pass" value="<?= isset($pass) ? $pass : "";?>"></input>
     <?php echo(isset($errores['pass'])) ? "$errores[pass] <br>" : "";?>
     <br>
+    <?php echo(isset($errores['usuario'])) ? "$errores[usuario] <br>" : "";?>
     <a href="pantallaRegistro.php">Registrate</a>
     <br>
     <input type="submit" name="bInicio" value="Inicio"></input>

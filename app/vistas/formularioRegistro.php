@@ -20,12 +20,18 @@
     <?php echo (isset($errores['foto'])) ? "$errores[foto] <br>" : "";?>
     <br>
     <label>Idioma</label>
-    <input type="text" name="idioma" value="<?= isset($idioma)?$idioma: "";?>"></input>
-    <?php echo (isset($errores['idioma'])) ? "$errores[idioma] <br>" : "";?>
+    <input type="checkbox" name="espanyol">Español</input>
+    <?php echo (isset($errores['espanyol'])) ? "$errores[espanyol] <br>" : "";?>
+    <input type="checkbox" name="ingles" value="<?= isset($ingles)?$ingles: "";?>">Inglés</input>
+    <?php echo (isset($errores['ingles'])) ? "$errores[ingles] <br>" : "";?>
+    <input type="checkbox" name="valenciano">Valenciano</input>
+    <?php echo (isset($errores['valenciano'])) ? "$errores[valenciano] <br>" : "";?>
     <br>
     <label>Descripción</label>
     <input type="text" name="descripcion" value="<?= isset($descripcion)?$descripcion: "";?>"></input>
     <?php echo(isset($erroes['descripcion'])) ? "$errores[descripcion] <br>": "";?>
     <br>
     <input type="submit" name="bRegistro" value="Registro"></input>
+
+    <?php echo (isset($errores['guardado'])) ? "$errores[guardado] <br>" : "";?>
 </form>

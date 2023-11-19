@@ -1,10 +1,15 @@
-<form action="" method="post" id="formularioAltaServicios"  enctype="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data">
     <label>Titulo</label>
     <input type="text" name="titulo" value="<?= isset($titulo)?$titulo:"";?>"></input>
     <?php echo(isset($errores['titulo'])) ? "$errores[titulo] <br>" : ""; ?>
     <br>
     <label>Categoría</label>
-    <input type="text" name="categoria" value="<?= isset($categoria)?$categoria:"";?>"></input>
+    <select name="categoria" id="categoria">
+        <option value="categoria1">categoría 1</option>
+        <option value="categoria2">categoría 2</option>
+        <option value="categoria3">categoría 3</option>
+        <option value="categoria4">categoría 4</option>
+    </select>
     <?php echo(isset($errores['categoria'])) ? "$errores[categoria] <br>" : ""; ?>
     <br>
     <label>Descripción</label>
@@ -13,7 +18,7 @@
     <br>
     <label>Tipo</label>
     <!-- todo -->
-    <select name="tipo" id="tipo" form="formularioAltaServicios">
+    <select name="tipo" id="tipo">
         <option value="intercambio">intercambio</option>
         <option value="pago">de pago</option>
     </select>
