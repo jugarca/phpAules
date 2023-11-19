@@ -1,11 +1,17 @@
 <?php
 
+session_start();
+
 //1. Se realizan los includes para importar los metodos. Se crea la cabecera y el pie.
 include('../libs/bGeneral.php');
 cabecera("Formulario Editar Perfil");
 
+if(!isset($_SESSION["nombre"])){
+   header("location: pantallaInicioSesion.php");
+}
+
 //2. Se crea el array de errores y tantas variables como se necesite validar.
-$errores[];
+$errores=[];
 $contrasenya;
 $foto;
 $idioma;

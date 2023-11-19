@@ -16,6 +16,12 @@ function cabecera($titulo =NULL) // el archivo actual
 			
 			</title>
 <meta charset="utf-8" />
+
+<style>
+        body {
+            background-color: <?php echo $colorFondo; ?>;
+        }
+    </style>
 </head>
 <body>
 <?php
@@ -171,5 +177,9 @@ function validateDate($fecha){
 		return true;
     }
 	return false;
+}
+
+function cMail($correo){
+	return preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/",$correo);
 }
 ?>

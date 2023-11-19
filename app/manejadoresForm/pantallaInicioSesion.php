@@ -1,4 +1,7 @@
 <?php
+session_start();
+session_unset ();
+session_destroy();
 
 //1. Se realizan los includes para importar los metodos. Se crea la cabecera y el pie.
 include ('../libs/bGeneral.php');
@@ -39,9 +42,14 @@ if (!isset($_REQUEST['bInicio'])) {
             //5.3 Cada linea la tenemos que trocear y comprobar el campo "1" y campo "3"
             //    Para ello se pasa con un explode a un array.
             $usuario = explode(";",$linea);
-            if ($usuario[0] == $login && $usuario[2]==$pass){
+            if ($usuario[1] == $login && $usuario[2]==$pass){
                 //Se pone la existencia de user a true
                 $existeUsuario = true;
+                //iniciar sesion
+                session_start();
+                $_SESSION["nombre"] = $usuario[0];
+                $_SESSION["email"] = $usuario[1];
+                $_SESSION["foto"] = $usuario[5];
                 //Como lo hemos encontrado se para el bucle.
                 break;
             }
@@ -62,6 +70,14 @@ if (!isset($_REQUEST['bInicio'])) {
         //Redirigimos a la pagina final
         header("location:pantallaMenuPrincipal.php");
     }else{
+        $rutaLogs = "../logs/logLogin.txt";
+        if($archivo = fopen($rutaLogs,"a")){
+            $hoy = date("Y-m-d H:i:s");
+            $log = "$login;$pass;$hoy" . PHP_EOL;
+            if(fwrite($archivo,$log)){
+                echo("log guardado correctamente");
+            }
+        }
         include ('../vistas/formularioInicioSesion.php');
     }
 }

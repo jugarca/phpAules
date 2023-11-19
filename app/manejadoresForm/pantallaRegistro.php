@@ -33,24 +33,20 @@ if(!isset($_REQUEST['bRegistro'])){
     $valenciano = recoge("valenciano");
     $descripcion = recoge("descripcion");
     //4.1 Se crean las validaciones
-    if($nombre == "" || !ctexto($nombre)){
+    if($nombre == ""){
         $errores['nombre'] = "El campo nombre es obligatorio";
     }
 
-    if($email == "" || !ctexto($email)){
+    if($email == ""){
         $errores['email'] = "El campo email es obligatorio";
     }
 
-    if($contrasenya == "" || !ctexto($contrasenya)){
+    if($contrasenya == ""){
         $errores['contrasenya'] = "Es obligatorio introducir contraseña";
     }
     //TODO VALIDAR LA FECHA
     if(!validateDate($fecha)){
         $errores['fecha'] = "La fecha es obligatoria y debe cumplir el siguiente formato: DD/MM/YYYY.";
-    }
-
-    if ($descripcion <> "" && !ctexto($descripcion)){
-        $errores['descripcion'] = "La descripcion esta mal introducida";
     }
 
     //TODO: Revisar los warnings que estan dando.
@@ -68,7 +64,10 @@ if(!isset($_REQUEST['bRegistro'])){
     $rutaCompleta = "../ficheros/usuarios.txt";
     if ($archivo = fopen($rutaCompleta, "a")) {
         $hoy = date("Y-m-d H:i:s");
-        $imagen = "../ficheros/imagenes/".$_FILES[0]['name'];
+        $imagen;
+        if ($foto['name'] == ""){
+           $imagen = $dir."/".$foto['name'];
+        }
         //TODO: ¿En la foto guardamos la ruta.?
         $usuario = "$nombre;$email;$contrasenya;$fecha;$idioma;$imagen;$descripcion;$hoy".PHP_EOL;
         if (fwrite($archivo, $usuario)){
@@ -83,8 +82,10 @@ if(!isset($_REQUEST['bRegistro'])){
 
     if(empty($errores)){
         //Redirigimos a la pagina de inicio de sesión
+        echo "Sin errores.";
         header("location:pantallaInicioSesion.php");
     } else{
+        echo print_r($errores);
         include("../vistas/formularioRegistro.php");
     }
 
