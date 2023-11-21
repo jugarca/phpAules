@@ -6,7 +6,15 @@ if(!isset($_SESSION["nombre"])){
     header("location: pantallaInicioSesion.php");
 }
 
+if(!isset($_COOKIE["idioma"])){
+    $lang = $_COOKIE["idioma"];
+}
+
 cabecera("Menu Principal");
+
+$foto = $_SESSION['foto'];
+echo($_COOKIE["idioma"]);
+echo ("<img src='".$foto."'> <br>");
 echo("
 <a href='pantallaAltaServicios.php'>Alta de Servicios</a>
 <br>

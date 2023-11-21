@@ -117,6 +117,23 @@ function cNum($num)
 }
 
 
+function cNum($num, $campo,&$errores,$requerido=TRUE)
+{
+    if($requerido && $num == ""){
+        $errores[$campo] = "El campo es obligatorio";
+        return false;
+    }
+    if (preg_match("/^[0-9]+$/", $num)){
+        return true;
+    }
+    else{
+        $errores[$campo] = "No es un campo numerico";
+        return false;
+    }
+        
+}
+
+
 function cFile(string $nombre, array &$errores, array $extensionesValidas, string $directorio, int  $max_file_size,  bool $required = TRUE)
 {
     
@@ -137,8 +154,9 @@ function cFile(string $nombre, array &$errores, array $extensionesValidas, strin
         
         $extension = strtolower(pathinfo($nombreArchivo, PATHINFO_EXTENSION));
 
+
         if (!in_array($extension, $extensionesValidas)) {
-            $errores["$nombre"] = "La extensión del archivo no es válida";
+            $errores["$nombre"] = "La extensión del archivo no es válida esta enviando $extension ";
             return false;
         }
        
@@ -171,15 +189,26 @@ function cFile(string $nombre, array &$errores, array $extensionesValidas, strin
 }
 
 
-function validateDate($fecha){
+function validateDate($fecha, $campo, &$errores){
 	$valores = explode('/', $fecha);
 	if(count($valores) == 3 && checkdate($valores[1], $valores[0], $valores[2])){
 		return true;
     }
+    $errores[$campo] = 'Es menor de edad, debe ser mayor de edad para registrarse';
 	return false;
 }
 
 function cMail($correo){
 	return preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/",$correo);
+}
+
+function mayorEdad($fecha, $campo, &$errores){
+    $anyo=date("Y")-date("Y", strtotime($fecha));
+
+
+    if ($anyo>17){
+        return true;
+    }
+    $errores[$campo] = 'Es menor de edad, debe ser mayor de edad para registrarse';
 }
 ?>

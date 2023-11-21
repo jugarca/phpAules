@@ -14,7 +14,8 @@ $foto;
 $idioma;
 $descripcion;
 $formatosFoto = ["jpg","png","gif"];
-$dir = "../ficheros/imagenes";
+$dirServidor = "../ficheros/imagenes";
+$dir = 'C:\xampp\htdocs\dwes2\app\ficheros\imagenes';
 $maxFileSize = "51200000";
 
 //3. Se comprueba si se entra por primera vez o se recarga el formulario con errores.
@@ -41,6 +42,10 @@ if(!isset($_REQUEST['bRegistro'])){
         $errores['email'] = "El campo email es obligatorio";
     }
 
+    cMail($email);
+
+    mayorEdad($fecha,'fecha',$errores);
+
     if($contrasenya == ""){
         $errores['contrasenya'] = "Es obligatorio introducir contraseña";
     }
@@ -51,7 +56,7 @@ if(!isset($_REQUEST['bRegistro'])){
 
     //TODO: Revisar los warnings que estan dando.
 
-    //cFile($foto, $errores,$formatosFoto, $dir,$maxFileSize); 
+    cFile('foto', $errores,$formatosFoto, $dir,$maxFileSize); 
 
     //Validamos los input del checkbox idioma
 
@@ -65,8 +70,8 @@ if(!isset($_REQUEST['bRegistro'])){
     if ($archivo = fopen($rutaCompleta, "a")) {
         $hoy = date("Y-m-d H:i:s");
         $imagen;
-        if ($foto['name'] == ""){
-           $imagen = $dir."/".$foto['name'];
+        if ($foto['name'] != ""){
+           $imagen = $dirServidor."/".$foto['name'];
         }
         //TODO: ¿En la foto guardamos la ruta.?
         $usuario = "$nombre;$email;$contrasenya;$fecha;$idioma;$imagen;$descripcion;$hoy".PHP_EOL;
