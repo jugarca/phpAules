@@ -204,6 +204,10 @@ function validateDate($fecha, $campo, &$errores){
 	return false;
 }
 
+/* 
+Las funciones de validación es mejor que todas tengan el mismo formato
+*/
+
 function cMail($correo){
 	return preg_match("/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/",$correo);
 }
