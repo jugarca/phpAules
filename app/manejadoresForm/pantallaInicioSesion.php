@@ -1,6 +1,10 @@
 <?php
 session_start();
 session_unset ();
+/**
+    Estas destruyendo la sesión antes de empezar, más abajo no podrás utilizar la sesión, por eso la tienes que volver a crear abajo.
+***/
+
 session_destroy();
 
 //1. Se realizan los includes para importar los metodos. Se crea la cabecera y el pie.
