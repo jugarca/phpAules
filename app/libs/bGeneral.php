@@ -118,6 +118,8 @@ function cNum($num)
 
 /****
 	No puedes tener dos funciones con el mismo nombre en la misma librería
+
+  	Te faltan las funciones para validar Selects, radio, ...y las de crear dinamicamente los componentes HTML
 ****/
 
 
