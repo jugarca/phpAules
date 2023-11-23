@@ -116,6 +116,10 @@ function cNum($num)
         return false;
 }
 
+/****
+	No puedes tener dos funciones con el mismo nombre en la misma librería
+****/
+
 
 function cNum($num, $campo,&$errores,$requerido=TRUE)
 {
