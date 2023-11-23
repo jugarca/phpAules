@@ -38,6 +38,14 @@ if(!isset($_REQUEST['bGuardar'])){
     $foto = recoge("foto");
 
     //4.1 Se crean las validaciones
+
+    /***
+    No les pasas a las funciones de validación los parámetros necesarios. Las mismas funciosnes
+    comprueban si el campo es requerido y escriben en el array de errores
+    Disponibilidad y categoría tenemos que validar que tiene un valor dentro de los previstos
+    Falta la foto
+    **/
+        
     if($titulo == "" && ctexto($titulo)){
         $errores['titulo'] = "El campo título es obligatorio";
     }
@@ -81,6 +89,11 @@ if(!isset($_REQUEST['bGuardar'])){
             }
             fclose($archivo);
         }
+        
+        /**
+        Los echo de arriba no se mostrarán porque hay un header location después
+        ***/
+        
         //redirigimos a la pantalla de Menú Pincipal
         header("location:pantallaMenuPrincipal.php");
     } else{
