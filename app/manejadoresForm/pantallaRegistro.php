@@ -1,6 +1,7 @@
 <?php
 //1. Se realizan los includes para importar los metodos. Se crea la cabecera y el pie.
 include("../libs/bGeneral.php");
+include("../config/config.php");
 
 cabecera("Formulario de Registro");
 
@@ -13,10 +14,6 @@ $fecha;
 $foto;
 $idioma;
 $descripcion;
-$formatosFoto = ["jpg","png","gif"];
-$dirServidor = "../ficheros/imagenes";
-$dir = 'C:\xampp\htdocs\dwes2\app\ficheros\imagenes';
-$maxFileSize = "51200000";
 
 //3. Se comprueba si se entra por primera vez o se recarga el formulario con errores.
 
@@ -34,61 +31,59 @@ if(!isset($_REQUEST['bRegistro'])){
     $valenciano = recoge("valenciano");
     $descripcion = recoge("descripcion");
     //4.1 Se crean las validaciones
-    if($nombre == ""){
-        $errores['nombre'] = "El campo nombre es obligatorio";
-    }
 
-    if($email == ""){
-        $errores['email'] = "El campo email es obligatorio";
-    }
+    cTexto($nombre, "nombre", $errores);
 
-    cMail($email);
+    cMail($email, "email", $errores);
 
-    mayorEdad($fecha,'fecha',$errores);
+    //Se valida si es una fecha correcta
+    cValidateDate($fecha, 'fecha de nacimiento', $errores);
+
+    //Se valida si es mayor de edad
+    cMayorEdad($fecha,'fecha de nacimiento',$errores);
 
     if($contrasenya == ""){
         $errores['contrasenya'] = "Es obligatorio introducir contraseña";
     }
-    //TODO VALIDAR LA FECHA
-    if(!validateDate($fecha)){
-        $errores['fecha'] = "La fecha es obligatoria y debe cumplir el siguiente formato: DD/MM/YYYY.";
-    }
 
-    //TODO: Revisar los warnings que estan dando.
-
-    cFile('foto', $errores,$formatosFoto, $dir,$maxFileSize); 
-
-    //Validamos los input del checkbox idioma
-
+    //TODO: Falta generar el código dinamico y ver como recoger en un array??
     $espanyol = ($espanyol=="on")?"C":"";
     $ingles = ($ingles=="on")?"E":"";
     $valenciano = ($valenciano=="on")?"V":"";
     $idioma =  $ingles . $valenciano . $espanyol;
 
-    //5. Si las validaciones han funcionado correctamente, se escribe en el fichero el numero usuario.
-    $rutaCompleta = "../ficheros/usuarios.txt";
-    if ($archivo = fopen($rutaCompleta, "a")) {
-        $hoy = date("Y-m-d H:i:s");
-        $imagen;
-        if ($foto['name'] != ""){
-           $imagen = $dirServidor."/".$foto['name'];
-        }
-        //TODO: ¿En la foto guardamos la ruta.?
-        $usuario = "$nombre;$email;$contrasenya;$fecha;$idioma;$imagen;$descripcion;$hoy".PHP_EOL;
-        if (fwrite($archivo, $usuario)){
-            echo "Usuario Guardado correctamente.";
-        }else{
-            $errores['guardado'] = "Problema al realizar el guardado.";
-        }
-        fclose($archivo);
-    }
+    //Como es la ultima validacion que se ejecuta, si no llegan errores guarda el fichero.
+    cFile('foto', $errores,$formatosFoto, $dir,$maxFileSize); 
+
+    
 
     //6. Si no hay errores se visualiza la pantalla principal y Si hay errores se recarga la pantalla
-
     if(empty($errores)){
+        //Se lanza el guardado si no hay errores:
+        //5. Si las validaciones han funcionado correctamente, se escribe en el fichero el numero usuario.
+        $errorGuardado = false;
+        $rutaCompleta = "../ficheros/usuarios.txt";
+        if ($archivo = fopen($rutaCompleta, "a")) {
+            $hoy = date("Y-m-d H:i:s");
+            $imagen;
+            if ($foto['name'] != ""){
+            $imagen = $dirServidor."/".$foto['name'];
+            }
+            //Se compone el usuario que se va a guardar.
+            $usuario = "$nombre;$email;$contrasenya;$fecha;$idioma;$imagen;$descripcion;$hoy".PHP_EOL;
+            //Si falla al guardar se envia un error.
+            if (!fwrite($archivo, $usuario)){
+                $errores['guardado'] = "Problema al realizar el guardado.";
+                include("../vistas/formularioRegistro.php");
+                $errorGuardado = true;
+            }
+            fclose($archivo);
+        }
+
         //Redirigimos a la pagina de inicio de sesión
-        echo "Sin errores.";
-        header("location:pantallaInicioSesion.php");
+        if (!$errorGuardado){
+          header("location:pantallaInicioSesion.php");
+        }
     } else{
         echo print_r($errores);
         include("../vistas/formularioRegistro.php");
