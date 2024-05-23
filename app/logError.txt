@@ -1,0 +1,158 @@
+Class "Model" not found0.45564200 1706692707
+Class "Model" not found0.86357300 1706692707
+Class "Model" not found0.03109400 1706692708
+Class "Model" not found0.19267900 1706692708
+Class "Model" not found0.36731300 1706692708
+paula
+paula
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+Si hay errores
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+Si hay errores
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+Si hay errores
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+Si hay errores
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+Si hay errores
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+Si hay errores
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+Si hay errores
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+Si hay errores
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+Si hay errores
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+No hay errores
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+Si hay errores
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+Si hay errores
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+$id_calculado Array
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+$id_calculado 1
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+$id_calculado 1
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+Resultado: 1
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA CONTROLADOR
+eNTRA EN EL POST
+login
+1234
+login
+1234
+sadasd
+asdasd
+sadasd
+asdasd
+sadasd
+11111
+eNTRA CONTROLADOR
+Call to a member function listarDisponibilidad() on null0.09685700 1707064748
+idDisponibilidad: 3
+idDisponibilidad: 3
+idDisponibilidad: 3
+idDisponibilidad: 3
+idDisponibilidad: 3
+idDisponibilidad: 3
+idDisponibilidad: 3
+idDisponibilidad: 3
+idDisponibilidad: 3
+idDisponibilidad: 3
+idDisponibilidad: 3
+idDisponibilidad: 3
+Call to undefined method PDO::prerare()0.54813800 1707065210
+idDisponibilidad: 3
+idDisponibilidad: 3
+idDisponibilidad: 3
+Unsupported operand types: string - string0.26566000 1707067838
+Unsupported operand types: string - string0.72503800 1707067930
+Unsupported operand types: string - string0.97907200 1707067935
+Unsupported operand types: string - string0.22685500 1707067955
+Unsupported operand types: string - string0.93038400 1707068048
+Unsupported operand types: string - string0.88862900 1707068090
+Unsupported operand types: string - string0.43732700 1707068103
+Unsupported operand types: string - string0.10979100 1707068193
+Unsupported operand types: string - string0.59051900 1707068345
+Call to undefined method PDO::prerare()0.13366800 1707069850
+Failed opening required 'C:\xampp\htdocs\dwes2\app\controlador/../templates/insertarIdiomas.php' (include_path='C:\xampp\php\PEAR')0.25605700 1707072088
+Call to a member function listarIdiomas() on null0.63421600 1707072214
+Class "Usuario" not found0.07603200 1707158179
+Call to undefined method PDOStatement::binParam()0.05689900 1707158227
+Call to undefined method PDOStatement::binParam()0.91583800 1707158378

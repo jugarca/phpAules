@@ -1,0 +1,8 @@
+1- Entramos en el formulario de login.
+2- Si no tienes usuario te registras en el formulario de registro.
+3- Si hay errores quedaras en la página de registro y si no los hay regresaras a la de login
+4- Se realiza el login y entras en el menu principal
+5- Desde el menu decidiras la opcion de menu deseada, editar perfil o alta de servicios.
+6- Pantalla de edicion de perfil
+7- Pantalla de alta de servicios
+8- Cerrar Sesion.

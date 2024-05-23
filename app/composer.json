@@ -1,0 +1,14 @@
+{
+    "name": "7s_judit_garcia/servidor",
+    "description": "Proyecto Evaluable",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Judit"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    }
+}

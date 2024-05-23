@@ -1,0 +1,96 @@
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.17957900 1706691564
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.13415500 1706692052
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.90453400 1706692397
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.10092200 1706692411
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.11867000 1706692412
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.32471500 1706692412
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.60771800 1706692412
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.07513400 1706692455
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.52372500 1706692455
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.71838800 1706692455
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.87707000 1706692455
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.76560600 1706692608
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.42824500 1706692609
+SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)0.63832300 1706692609
+Resultado: 
+Resultado: 
+Resultado: 1
+Resultado: 
+Resultado: 1
+Resultado: 
+Resultado: 1
+Resultado: 
+Resultado: 1
+Resultado: 
+Resultado: 1
+Resultado: 
+Resultado: 1
+Resultado: 
+Resultado: 1
+Resultado: 
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+Resultado: 1
+ResultadoBD: 1
+ResultadoBD: 1
+Resultado: 1
+Resultado: 1
+ResultadoControlador: 1
+ResultadoControlador: 1
+ResultadoControlador: 1
+ResultadoControlador: 1
+ResultadoControlador: 1
+ResultadoControlador: 1
+1
+1
+1
+Entra aqui 1
+Entra aqui 2
+Entra aqui 3
+Entra aqui 1
+Entra aqui 2
+Entra aqui 1
+Entra aqui 2
+Entra aqui 3
+Entra aqui 1
+Entra aqui 2
+Entra aqui 3
+Entra aqui 4
+Entra aqui insertar 1
+Entra aqui insertar 2
+Entra aqui 5
+Entra aqui 1
+Entra aqui 2
+Entra aqui 3
+Entra aqui 4
+Entra aqui 5
+Entra aqui 6
+Entra aqui 1
+Entra aqui 2
+Entra aqui 3
+Entra aqui 4
+Entra aqui 5
+Entra aqui 6
+Entra aqui 1
+Entra aqui 2
+Entra aqui 1
+Entra aqui 2
+Entra aqui 3
+Entra aqui 4
+Entra aqui 5
+Entra aqui 6

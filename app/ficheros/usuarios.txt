@@ -1,0 +1,5 @@
+Judit;jugarca08@gmail.com;1234;09/05/1985;C;../ficheros/imagenes/logo.jpg;esto es una prueba;2023-11-20 22:59:25
+Jose Luis;jugarca08@gmail.com;1234;09/05/1985;V;../ficheros/imagenes/logo2.jpg;Descripcion1;2023-11-23 13:06:55
+Jose Luis;jugarca08@gmail.com;1234;09/05/1985;;;Descripcion1;2023-11-23 13:07:23
+Jose Luis;jugarca08@gmail.com;1234;09/05/1985;;../ficheros/imagenes/logo2.jpg;Descripcion1;2023-11-23 13:07:36
+Jose Luis;jugarca08@gmail.com;12342;09/05/1985;V;../ficheros/imagenes/logo2.jpg;Descripcion1;2023-11-23 13:17:33
